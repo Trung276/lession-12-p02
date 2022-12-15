@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse</title>
+</head>
+<body>
+<script>
+    let x = Array();
+    let y = Number(prompt("Nhap vao so phan tu trong mang"));
+    x.length = y;
+    for (let i = 0; i < x.length; i++) {
+        x[i] = Number(prompt("Nhap vao phan tu thu " + i));
+    }
+    document.write("Mang ban da nhap la: " + x + "<br>");
+    let a = 0;
+    let b = x.length - 1;
+    while (a < b) {
+        let hamphu = x[a];
+        x[a] = x[b];
+        x[b] = hamphu;
+        a++;
+        b--;
+    }
+    document.write("Ket qua dao mang la: " + x);
+</script>
+</body>
+</html>
